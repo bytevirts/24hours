@@ -84,7 +84,7 @@ function ToolCallCard({ toolUse }: { toolUse: NonNullable<ChatMessage['toolUse']
           </div>
 
           {/* Output */}
-          {toolUse.output && (
+          {toolUse.output != null && (
             <div>
               <div className="text-xs text-white/50 uppercase tracking-wide mb-1">Output</div>
               <pre className="bg-black/30 rounded-lg p-3 text-xs font-mono text-white/80 overflow-x-auto max-h-64 overflow-y-auto">
