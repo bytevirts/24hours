@@ -3,7 +3,7 @@ import { io, Socket } from 'socket.io-client';
 import type { ChatMessage, SessionMessageEvent, SDKMessage } from '../types/session';
 import { parseSDKMessage, updateToolState } from '../utils/sessionMessageParser';
 
-const SOCKET_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const SOCKET_URL = import.meta.env.VITE_API_URL || window.location.origin;
 
 interface UseSessionStreamOptions {
   sessionId: string;

@@ -21,7 +21,7 @@ import type {
   LinearComment,
 } from '../types';
 
-const SOCKET_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const SOCKET_URL = import.meta.env.VITE_API_URL || window.location.origin;
 
 export function useTaskMonitor() {
   const [_socket, setSocket] = useState<Socket | null>(null);
