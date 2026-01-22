@@ -28,6 +28,7 @@ import { SettingsModule } from './settings/settings.module';
         redis: {
           host: configService.get('redis.host'),
           port: configService.get('redis.port'),
+          password: configService.get('redis.password'),
         },
       }),
       inject: [ConfigService],
